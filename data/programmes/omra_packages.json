@@ -1,0 +1,56 @@
+{
+  "programmes": [
+    {
+      "id": "OMRA-001",
+      "nom": "Omra Économique 15 jours",
+      "type": "omra",
+      "destinations": ["La Mecque", "Médine"],
+      "prix_base_tnd": 3200,
+      "hebergements": [
+        "Hôtel Elaf Bakkah (Makkah - 4 étoiles, 1.5km du Haram avec navette)",
+        "Hôtel Bosphorus (Madinah - 4 étoiles, 300m du Haram)"
+      ],
+      "inclus": ["Vol aller-retour", "Visa Omra", "Hébergement", "Transferts internes", "Accompagnateur"],
+      "profil_cible": "Moyen budget, Famille"
+    },
+    {
+      "id": "OMRA-002",
+      "nom": "Omra VIP 10 jours",
+      "type": "omra",
+      "destinations": ["La Mecque", "Médine"],
+      "prix_base_tnd": 5500,
+      "hebergements": [
+        "Swissotel Al Maqam (Makkah - 5 étoiles, face au Haram)",
+        "Anwar Al Madinah Mövenpick (Madinah - 5 étoiles, sur l'esplanade)"
+      ],
+      "inclus": ["Vol direct Tunisair", "Visa Omra", "Hébergement 5*", "Transferts en SUV privé", "Guide spirituel dédié"],
+      "profil_cible": "Seniors, Haut de gamme"
+    },
+    {
+      "id": "OMRA-003",
+      "nom": "Omra Ramadan Fin de Mois 15 jours",
+      "type": "omra",
+      "destinations": ["La Mecque", "Médine"],
+      "prix_base_tnd": 7800,
+      "hebergements": [
+        "Makkah Clock Royal Tower, A Fairmont Hotel (Makkah - 5 étoiles)",
+        "Pullman Zamzam Madina (Madinah - 5 étoiles)"
+      ],
+      "inclus": ["Vol aller-retour Saudia", "Visa Omra", "Hébergement 5*", "Transferts VIP", "Repas Iftar inclus"],
+      "profil_cible": "Seniors, Haut de gamme, Famille"
+    },
+    {
+      "id": "OMRA-004",
+      "nom": "Omra Mouled 12 jours",
+      "type": "omra",
+      "destinations": ["Médine", "La Mecque"],
+      "prix_base_tnd": 3900,
+      "hebergements": [
+        "Olayan Ajyad (Makkah - 4 étoiles)",
+        "Emaar Elite (Madinah - 4 étoiles)"
+      ],
+      "inclus": ["Vol aller-retour", "Visa Omra", "Hébergement", "Visites Mazarat Médine spéciales"],
+      "profil_cible": "Moyen budget, Voyage spirituel court"
+    }
+  ]
+}

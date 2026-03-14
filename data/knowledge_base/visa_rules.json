@@ -1,0 +1,16 @@
+{
+  "visa": [
+    {
+      "pays": "Arabie Saoudite (Omra)",
+      "exigences": "Passeport valide au moins 6 mois. Billet d'avion A/R confirmé. Réservation d'hôtel. Photo d'identité numérique. Femmes de moins de 45 ans : présence d'un Mahram (tuteur légal) recommandée mais plus obligatoire. Vaccin Covid-19 ou fièvre jaune selon les directives en vigueur."
+    },
+    {
+      "pays": "Turquie",
+      "exigences": "Pour les Tunisiens, pas de visa pour les séjours touristiques de moins de 90 jours. Passeport valide au moins 6 mois à la date d'entrée."
+    },
+    {
+      "pays": "Espagne (Schengen)",
+      "exigences": "Prise de rendez-vous BLS. Formulaire de demande de visa. 2 photos récentes fond blanc. Passeport valide 3 mois après la date prévue de retour. Assurance voyage (30 000 EUR min). Attestation de travail, 3 dernières fiches de paie, historique CNSS. Relevés bancaires des 6 derniers mois avec solde suffisant. Réservation hôtel et vol."
+    }
+  ]
+}

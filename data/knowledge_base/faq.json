@@ -1,0 +1,24 @@
+{
+  "faq": [
+    {
+      "q": "Quels sont vos horaires de travail ?",
+      "a": "Nous sommes ouverts du lundi au samedi, de 8h à 18h en continu. Fermé le dimanche."
+    },
+    {
+      "q": "Où se trouve votre agence ?",
+      "a": "Notre agence principale est située au Centre Urbain Nord, Tunis, Immeuble Carthage, 3ème étage."
+    },
+    {
+      "q": "Comment puis-je payer mon voyage ?",
+      "a": "Nous acceptons les paiements par virement bancaire, carte bancaire en ligne, TPE en agence, espèces, ou chèque certifié."
+    },
+    {
+      "q": "Est-il possible de payer en plusieurs fois ?",
+      "a": "Oui, pour les forfaits Omra et les grands voyages, nous proposons des facilités de paiement sur 3 à 6 mois selon le dossier."
+    },
+    {
+      "q": "Que se passe-t-il si je dois annuler ?",
+      "a": "L'annulation à plus de 30 jours du départ entraîne 10% de frais. Entre 30 et 15 jours, 50%. À moins de 15 jours, aucun remboursement n'est possible (sauf assurance annulation)."
+    }
+  ]
+}

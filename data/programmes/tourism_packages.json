@@ -1,0 +1,64 @@
+{
+  "programmes": [
+    {
+      "id": "TOUR-001",
+      "nom": "Istanbul Magique",
+      "type": "tourisme",
+      "destinations": ["Istanbul", "Bursa"],
+      "prix_base_tnd": 1500,
+      "duree_jours": 7,
+      "activites": [
+        "Visite de la Mosquée Bleue et Sainte-Sophie",
+        "Croisière sur le Bosphore",
+        "Journée entière à Bursa avec téléphérique",
+        "Shopping au Grand Bazar"
+      ],
+      "profil_cible": "Famille, Couple, Étudiant"
+    },
+    {
+      "id": "TOUR-002",
+      "nom": "Aventure Thaïlandaise",
+      "type": "tourisme",
+      "destinations": ["Bangkok", "Phuket"],
+      "prix_base_tnd": 3800,
+      "duree_jours": 10,
+      "activites": [
+        "Street food à Bangkok",
+        "Trek dans la jungle",
+        "Snorkeling à Phi Phi Islands",
+        "Journée avec les éléphants (sanctuaire éthique)"
+      ],
+      "profil_cible": "Aventurier, Jeunes, Couple"
+    },
+    {
+      "id": "TOUR-003",
+      "nom": "Découverte Bali (Lune de Miel)",
+      "type": "tourisme",
+      "destinations": ["Ubud", "Seminyak"],
+      "prix_base_tnd": 4500,
+      "duree_jours": 12,
+      "activites": [
+        "Visite des rizières en terrasses de Tegalalang",
+        "Forêt des singes d'Ubud",
+        "Dîner romantique sur la plage de Jimbaran",
+        "Massage balinais traditionnel"
+      ],
+      "profil_cible": "Couple, Voyage de noces"
+    },
+    {
+      "id": "TOUR-004",
+      "nom": "Séjour Paris Classique",
+      "type": "tourisme",
+      "destinations": ["Paris"],
+      "prix_base_tnd": 2200,
+      "duree_jours": 6,
+      "activites": [
+        "Tour Eiffel et Trocadéro",
+        "Croisière sur la Seine (Bateaux-Mouches)",
+        "Musée du Louvre",
+        "Journée à Disneyland Paris (Optionnel)"
+      ],
+      "profil_cible": "Famille, Culture, Couple"
+    }
+  ]
+}

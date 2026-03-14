@@ -1,0 +1,91 @@
+{
+  "name": "📧 Email (Gmail) -> Rihla-AI",
+  "nodes": [
+    {
+      "parameters": {
+        "postProcessAction": "nothing",
+        "format": "resolved",
+        "options": {
+          "customEmailConfig": "[\"UNSEEN\"]"
+        }
+      },
+      "name": "Email Read IMAP",
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2,
+      "position": [
+        250,
+        300
+      ],
+      "credentials": {
+        "imap": {
+          "id": "",
+          "name": "Compte Gmail IMAP"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/chat",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"sender\": \"{{$json.from.value[0].address}}\",\n  \"message\": \"{{$json.text}}\",\n  \"canal\": \"EMAIL\",\n  \"nom_client\": \"{{$json.from.value[0].name}}\"\n}",
+        "options": {}
+      },
+      "name": "Rihla FastAPI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        470,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "contact@rihla-ai.com",
+        "toEmail": "={{$('Email Read IMAP').item.json.from.value[0].address}}",
+        "subject": "Re: {{$('Email Read IMAP').item.json.subject}}",
+        "text": "={{$json.reply}}",
+        "options": {}
+      },
+      "name": "Send Email SMTP",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [
+        690,
+        300
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "",
+          "name": "Compte Gmail SMTP"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Email Read IMAP": {
+      "main": [
+        [
+          {
+            "node": "Rihla FastAPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rihla FastAPI": {
+      "main": [
+        [
+          {
+            "node": "Send Email SMTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

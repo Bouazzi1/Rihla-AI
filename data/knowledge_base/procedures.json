@@ -1,0 +1,24 @@
+{
+  "procedures": [
+    {
+      "titre": "Réservation Omra",
+      "etapes": [
+        "Fournir un passeport valide (au moins 6 mois après la date de retour).",
+        "Signer le contrat de voyage en agence ou en ligne.",
+        "Verser un acompte de 50% du montant total.",
+        "Nous nous chargeons de la demande de visa (délai moyen de 3 à 5 jours).",
+        "Une semaine avant le départ, paiement du reliquat et remise du carnet de voyage."
+      ]
+    },
+    {
+      "titre": "Voyage organisé (Tourisme)",
+      "etapes": [
+        "Choisir le programme et la date (possibilité de devis sur mesure).",
+        "Envoi de la copie des passeports de tous les voyageurs.",
+        "Paiement de l'acompte (généralement 30% ou 50%).",
+        "Assistance pour le visa si la destination l'exige.",
+        "Réception des vouchers hôtels et billets d'avion J-7."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "name": "WhatsApp (WAHA) -> Rihla-AI",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "waha",
+        "options": {}
+      },
+      "name": "Webhook WAHA",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ],
+      "webhookId": "waha-incoming-msg"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8000/chat",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"sender\": \"{{$json.body.payload.from}}\",\n  \"message\": \"{{$json.body.payload.body}}\",\n  \"canal\": \"WHATSAPP\",\n  \"nom_client\": \"{{$json.body.payload._data.notifyName}}\"\n}",
+        "options": {}
+      },
+      "name": "Rihla FastAPI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        470,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://waha:3000/api/sendText",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"chatId\": \"{{$('Webhook WAHA').item.json.body.payload.from}}\",\n  \"text\": \"{{$json.reply}}\",\n  \"session\": \"default\"\n}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "68ff5d3b477a4741bd5dbf5345591c21"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Send WAHA Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        690,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook WAHA": {
+      "main": [
+        [
+          {
+            "node": "Rihla FastAPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rihla FastAPI": {
+      "main": [
+        [
+          {
+            "node": "Send WAHA Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}
